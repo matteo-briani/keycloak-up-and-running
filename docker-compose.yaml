@@ -1,0 +1,39 @@
+version: "3.0"
+
+services:
+
+  identity-provider:
+    image: quay.io/keycloak/keycloak:15.0.2
+    container_name: identity-provider
+    ports: 
+      - 8080:8080
+      - 8443:8443
+    environment:
+      - KEYCLOAK_USER=admin
+        # - KEYCLOAK_PASSWORD=asdfqwer # fake password, change it and enable 2FA
+      - PROXY_ADDRESS_FORWARDING=true
+      - DB_VENDOR=POSTGRES
+      - DB_ADDR=identity-provider-database:5432
+      - DB_DATABASE=keycloak
+      - DB_USER=keycloak
+      - DB_PASSWORD=keycloak
+      - DB_SCHEMA=public
+    volumes:
+      - keycloak-data-volume:/var/lib/keycloak/data
+      # To avoid using Postgres, one could map the default database location. not tested (DEV ONLY!!)
+      # - .local/keycloak/:/opt/jboss/keycloak/standalone/data/
+    
+  identity-provider-database:
+    image: postgres:bullseye
+    container_name: identity-provider-database
+    environment:
+      - POSTGRES_DB=keycloak
+      - POSTGRES_USER=keycloak
+      - POSTGRES_PASSWORD=keycloak
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
+  keycloak-data-volume:
+
