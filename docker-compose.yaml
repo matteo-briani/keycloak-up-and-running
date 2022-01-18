@@ -3,6 +3,7 @@ version: "3.0"
 services:
 
   identity-provider:
+    restart: unless-stopped
     image: quay.io/keycloak/keycloak:15.0.2
     container_name: identity-provider
     ports: 
@@ -24,6 +25,7 @@ services:
       # - .local/keycloak/:/opt/jboss/keycloak/standalone/data/
     
   identity-provider-database:
+    restart: unless-stopped
     image: postgres:bullseye
     container_name: identity-provider-database
     environment:
