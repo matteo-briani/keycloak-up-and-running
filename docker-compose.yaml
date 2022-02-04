@@ -23,7 +23,7 @@ services:
       - keycloak-data-volume:/var/lib/keycloak/data
 
       # Customize look-n-feel themes; uncomment the following two lines
-      # - ./custom-theme/:/opt/jboss/keycloak/themes/custom-theme/
+      # - ./custom-theme2/:/opt/jboss/keycloak/themes/custom-theme2/
       # - ./keycloak/standalone/configuration/standalone.xml:/opt/jboss/keycloak/standalone/configuration/standalone.xml
       # - ./keycloak/standalone/configuration/standalone-ha.xml:/opt/jboss/keycloak/standalone/configuration/standalone-ha.xml
 
