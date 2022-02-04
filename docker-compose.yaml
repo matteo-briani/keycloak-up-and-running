@@ -25,6 +25,7 @@ services:
       # Customize look-n-feel themes; uncomment the following two lines
       # - ./custom-theme/:/opt/jboss/keycloak/themes/custom-theme/
       # - ./keycloak/standalone/configuration/standalone.xml:/opt/jboss/keycloak/standalone/configuration/standalone.xml
+      # - ./keycloak/standalone/configuration/standalone-ha.xml:/opt/jboss/keycloak/standalone/configuration/standalone-ha.xml
 
       # To avoid using Postgres, one could map the default database location. not tested (DEV ONLY!!)
       # - .local/keycloak/:/opt/jboss/keycloak/standalone/data/
