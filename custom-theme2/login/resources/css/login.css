@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;800&display=swap');
+html {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  height: 100%;
+}
+
+body {
+  background-color: #F7F7F8;
+  margin: 0;
+  height: inherit;
+}
+
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Page header */
+.page-header {
+  width: 100%;
+  padding: .5rem 0;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14);
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.page-logo {
+  height: 3rem;
+  width: 6rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../img/viblio-logo-red.png");
+}
+
+/* Layout */
+.card-layout {
+  display: flex;
+  background-color: white;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
+  max-width: 956px;
+  width: 100%;
+}
+.card-form {
+  flex: 1 1 50%;
+  min-width: 300px;
+}
+.card-image {
+  flex: 1 1 50%;
+  background: url("../img/form-image.png") center no-repeat, #D0DDE6;
+}
+
+.form-wrapper {
+  padding: 1.5rem;
+}
+
+.form-card-header {
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.form-card-header h1  {
+  font-size: 1.5rem;
+  margin: 0 0 .5rem 0;
+}
+
+/* Form fields */
+.form-field {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.form-field-label {
+  display: block;
+  font-weight: 600;
+  color: #58585A;
+  margin-bottom: .25rem;
+}
+
+input:-internal-autofill-selected.form-field-input {
+  -webkit-box-shadow: 0 0 0px 1000px #F7F7F8 inset;
+  font-size: inherit;
+}
+
+.form-field-input {
+  display: block;
+  outline-style: none;
+  border: none;
+  border-radius: 0;
+  background-color: #F7F7F8 !important;
+  padding: 1rem 1.25rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-field-reset {
+  text-align: center;
+  color: #58585A;
+}
+
+.form-field-reset a {
+  display: inline-block;
+  margin-left: .5rem;
+  color: #FF0000;
+  font-weight: 600;
+}
+
+.login-page-button {
+  width: 100%;
+  font-weight: 800;
+  font-size: 1.125rem;
+  color: white;
+  padding: .75rem 1rem;
+  background-color: #FF0000;
+  box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.25);
+  border-width: 0;
+  border-radius: 0;
+}
+

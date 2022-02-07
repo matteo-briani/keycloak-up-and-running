@@ -11,7 +11,7 @@ services:
       - 8443:8443
     environment:
       - KEYCLOAK_USER=admin
-        # - KEYCLOAK_PASSWORD=asdfqwer # fake password, change it and enable 2FA
+      - KEYCLOAK_PASSWORD=asdfqwer # fake password, change it and enable 2FA
       - PROXY_ADDRESS_FORWARDING=true
       - DB_VENDOR=POSTGRES
       - DB_ADDR=identity-provider-database:5432
@@ -21,6 +21,12 @@ services:
       - DB_SCHEMA=public
     volumes:
       - keycloak-data-volume:/var/lib/keycloak/data
+
+      # Customize look-n-feel themes; uncomment the following two lines
+      # - ./custom-theme2/:/opt/jboss/keycloak/themes/custom-theme2/
+      # - ./keycloak/standalone/configuration/standalone.xml:/opt/jboss/keycloak/standalone/configuration/standalone.xml
+      # - ./keycloak/standalone/configuration/standalone-ha.xml:/opt/jboss/keycloak/standalone/configuration/standalone-ha.xml
+
       # To avoid using Postgres, one could map the default database location. not tested (DEV ONLY!!)
       # - .local/keycloak/:/opt/jboss/keycloak/standalone/data/
     
