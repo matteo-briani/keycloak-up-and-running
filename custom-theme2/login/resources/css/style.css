@@ -66,14 +66,21 @@ body,
 .form-header {
   margin-bottom: 1rem;
 }
+.form-footer,
 .form-body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 1rem;
-  margin-bottom: 1rem;
 }
-.form-footer {
+.form-body {
+  margin-bottom: 1rem;
+  min-height: 30vh;
+}
+
+.form-info {
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
 }
 
 /* Form header */
@@ -82,6 +89,7 @@ body,
   margin-top: 0;
   margin-bottom: 0.5rem;
   color: black;
+  line-height: 1;
 }
 .form-header-message {
   margin: 0;
@@ -126,7 +134,12 @@ input:-internal-autofill-selected.field-input {
 }
 
 /* Button */
+.button-group {
+  display: flex;
+  align-items: center;
+}
 .button {
+  flex: 1 1 0;
   display: inline-flex;
   justify-content: center;
   font-weight: 800;
@@ -139,6 +152,12 @@ input:-internal-autofill-selected.field-input {
 .button-primary {
   color: white;
   background-color: #ff0000;
+}
+.link-back {
+  text-align: center;
+  margin: 0.5rem 0;
+  color: #58585a;
+  text-decoration: none;
 }
 
 /* Providers */
@@ -155,7 +174,7 @@ input:-internal-autofill-selected.field-input {
 }
 .button-provider {
   text-decoration: none;
-  background-color: #F7F7F8;
+  background-color: #f7f7f8;
 }
 #social-linkedin {
   color: #0e76a8;
